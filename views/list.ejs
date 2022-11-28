@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>To Do List</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
+    <link href="css/defaultstyles.css" rel="stylesheet" >
+    
+    <!-- Custom styles for this template -->
+
+  </head>
+  <body>
+    
+<div class="taskbox">
+
+<div class="">
+    <h2> To Do List App</h2>
+    <h2>  <%= date %> </h2>
+</div>
+
+<div class="box">
+
+    <% for (var i=0; i<newListItems.length; i++){ %>
+    <div class="item">
+         <input type="checkbox">
+        <p><%= newListItems[i] %></p> 
+    </div>
+    <% } %>
+
+
+    <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item">
+        <button type="submit" name="button">+</button>
+    </form>
+</div>
+
+<form class="item" action="/r" method="post">
+    <button type="submit" name="button">R</button>
+</form>
+
+</div>
+
+    
+  </body>
+</html>
